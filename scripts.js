@@ -126,7 +126,7 @@ for (const item of todoItems) {
   console.log(item.id);
   const task = `
     <div class="task ${item.status == "completed" ? "finished" : ""}" id=${item.id}>
-      <input type="checkbox" id="${item.taskName}" name="${item.id}" value="${item.taskName}">
+      <input type="checkbox" id="${item.taskName}" name="${item.id}" value="${item.taskName}" ${item.status === "completed" ? "checked" : ""}>
       <input type="text" class="taskName no-select" value="${item.taskName}" for="${item.id}" readonly>
       <button class="edit">
           <i class="fa-solid fa-pen-to-square"></i>
