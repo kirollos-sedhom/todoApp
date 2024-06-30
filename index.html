@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/abb579fef1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="main">
+        <div id="home" data-tab-content class="active">
+            <div class="container">
+                <p>            wellcome to your task manager.
+                </p>
+                <p>            please navigate using the buttons in the bottom of your screen
+                </p>
+            </div>
+
+        </div>
+        <div id="tasks" data-tab-content>
+            <div id="hidden-container" class="hidden">
+                <div id="add-todo-form">
+                    <input type="text" id="new-todo-text" placeholder="Enter your to-do item">
+    
+                    <div class="form-text-and-button">
+                        <textarea name="todo-details" id="todo-details" placeholder="details"></textarea>
+    
+                        <button type="submit" id="submit-todo">Add</button>
+                    </div>
+    
+                    
+                </div>
+            </div>
+            
+            <div id="todo-list">
+
+            </div>
+
+
+            <i class="fa-solid fa-plus add" id="add-todo-button"></i>
+        </div>
+        <div id="about" data-tab-content>
+            <div class="container">
+                <p>this application's purpose was to prove my skills in javascript</p>
+                <p>i hope you like it and enjoy using it</p>
+            </div>
+
+        </div>
+        <div id="contact" data-tab-content>
+            <p>contact us</p>
+      
+            <form id="contactForm">
+              <label for="name">Name:</label><br>
+              <input type="text" id="name" name="name" required><br><br>
+              
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email" required><br><br>
+              
+              <label for="message">Message:</label><br>
+              <textarea id="message" name="message" required></textarea><br><br>
+              
+              <button type="submit" id="submit-mail">Send</button>
+            </form>
+        </div>
+        <!-- <i class="fa-solid fa-check"></i><p>no tasks yet</p> -->
+        
+    </div>
+    
+    <footer>
+        <i data-tab-target="#home" class="fa-solid fa-house active"></i>
+        <i data-tab-target="#tasks" class="fa-solid fa-list-check"></i>
+        <i data-tab-target="#about" class="fa-solid fa-circle-info"></i>
+        <i data-tab-target="#contact" class="fa-solid fa-envelope"></i>    </footer>
+
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "TlMIWacvPC9m_0tJG",
+            });
+        })();
+        </script>
+        <script type="module" src="./scripts.js"></script>
+</body>
+</html>
